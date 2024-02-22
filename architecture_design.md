@@ -18,10 +18,14 @@ The implemented solution utilizes threads and a priority queue to manage message
 - Enqueuing: Messages are added to the priority queue based on their priority.
 - Processing: Messages are processed in the order of their priority, with higher priority messages being processed first.
 - Peeking: Allows users to view the top message in the priority queue without removing it.
-
+  
 ## Architecture and Design
 
-The system follows a multithreaded architecture where `UserInputThread` and `ProcessThread` operate concurrently. The `UserInputThread` handles user interactions through the command line interface, while the `ProcessThread` manages message processing in the background.
+The system follows a multithreaded architecture where `UserInputThread` and `ProcessThread` operate concurrently. Additionally, a thread pool is utilized to manage the execution of these threads efficiently.
+
+The `UserInputThread` handles user interactions through the command line interface, while the `ProcessThread` manages message processing in the background. The thread pool executor coordinates the execution of these threads, ensuring optimal resource utilization and responsiveness.
+
+The use of a thread pool allows for dynamic allocation and management of threads, reducing overhead and improving performance compared to creating and managing threads manually.
 
 ## Good Design/Coding Concepts Used
 
