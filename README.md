@@ -10,7 +10,7 @@ This is a message processing system implemented in Python. It allows users to ad
 ## Usage
 
 1. Run the program:
--python main.py
+  python main.py
 
 2. Follow the on-screen instructions to interact with the message processing system:
 - Choose option 1 to add a message.
