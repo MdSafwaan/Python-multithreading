@@ -1,28 +1,53 @@
 # Message Processing System
 
-This Python-based Message Processing System allows for the management of messages using a priority queue and multiple threads. It provides functionality for adding messages, processing them based on priority, and peeking at messages in the queue.
-
-## Features
-
-- **Priority Queue**: Messages are stored in a priority queue based on their priority levels.
-- **Threaded Processing**: Concurrent processing of messages and user interaction using threads.
-- **User Interaction**: Simple command-line interface for adding messages and peeking at the queue.
-
-
-4. **Follow On-screen Prompts**:
-- Choose options to add messages, peek at messages, or stop the program.
+This is a message processing system implemented in Python. It allows users to add messages with priorities, peek at the top message in the priority queue, and stop the program.
 
 ## Requirements
 
 - Python 3.11.2
 
-## Documentation
 
-- **Architecture and Design**: For detailed architecture and design information, refer to the [architecture_design.md](architecture_design.md) file.
-- **Additional Documentation**: Additional documentation can be found within the source code files.
+## Usage
 
-## Contribution
+1. Run the program:
+-python main.py
 
-Contributions are welcome! Please fork the repository and submit a pull request with your enhancements.
+2. Follow the on-screen instructions to interact with the message processing system:
+- Choose option 1 to add a message.
+- Choose option 2 to peek at the top message in the priority queue.
+- Choose option 3 to stop the program.
+
+## Test Cases
+
+### Adding a Message
+
+- **Description**: User adds a message with high priority.
+- **Steps**:
+1. Choose option 1 to add a message.
+2. Enter priority as 0 (high).
+3. Enter message content.
+- **Expected Outcome**: Message is added to the priority queue and processed immediately.
+
+### Peeking at the Top Message
+
+- **Description**: User peeks at the top message in the priority queue.
+- **Steps**:
+1. Choose option 2 to peek at the top message.
+- **Expected Outcome**: Details of the top message (if any) are displayed to the user.
+
+### Stopping the Program
+
+- **Description**: User chooses to stop the program.
+- **Steps**:
+1. Choose option 3 to stop the program.
+- **Expected Outcome**: Program terminates gracefully.
+
+## Additional Information
+
+- The system utilizes threads and a priority queue for efficient message processing.
+- User input is handled through the command line interface.
+- Message processing occurs in the background, allowing users to interact with the system seamlessly.
+
+
 
 
