@@ -1,48 +1,54 @@
-# Message Processing System Architecture and Design
+# Message Processing System Documentation
 
 ## Overview
 
-The Message Processing System is designed to handle the asynchronous processing of messages with varying priorities. It consists of several key components working together to ensure efficient message handling and user interaction.
+The message processing system implemented in this assignment allows users to add messages with priorities, peek at the top message in the priority queue, and stop the program. The system consists of two main components: `UserInputThread` and `ProcessThread`, which interact with each other to handle user input and process messages.
 
-## Architecture
+## Implemented Solution
 
-The architecture of the Message Processing System can be divided into the following components:
+The implemented solution utilizes threads and a priority queue to manage message processing. The `UserInputThread` is responsible for handling user input and interacting with the `ProcessThread` to perform actions such as adding messages, peeking at messages, and stopping the program. On the other hand, the `ProcessThread` continuously processes messages from the priority queue based on their priority.
 
-1. **Priority Message Queue**:
-   - Manages the queue of messages awaiting processing.
-   - Utilizes a priority queue data structure to ensure higher priority messages are processed first.
-   - Implements synchronization mechanisms such as locks and conditions to handle concurrent access safely.
+## Data Structures and Algorithms Used
 
-2. **Thread Pool**:
-   - Manages the execution of multiple threads within the system.
-   - Includes a user input thread for interacting with the system and a message processing thread for handling message processing tasks.
-   - Utilizes the ThreadPoolExecutor class to manage the concurrent execution of threads.
+### Data Structures:
+- `Message`: Represents a message with content, priority, and a unique identifier.
+- `PriorityQueue`: Utilized for storing messages based on their priority.
 
-3. **Message Sending Function** (Optional):
-   - Provides a function or interface for sending messages to the system for processing.
-   - Not explicitly shown in the provided code but can be integrated into the system as needed.
+### Algorithms:
+- Enqueuing: Messages are added to the priority queue based on their priority.
+- Processing: Messages are processed in the order of their priority, with higher priority messages being processed first.
+- Peeking: Allows users to view the top message in the priority queue without removing it.
 
-## Design
+## Building and Running the Program
 
-### Priority Message Queue Design:
-- **Message Class**: Represents individual messages with attributes such as content, priority, and ID.
-- **ProcessThread Class**: Manages the processing of messages within a separate thread.
-  - Utilizes a PriorityQueue to store messages based on their priority.
-  - Implements methods for enqueueing messages, processing messages, and peeking at message details.
-- **Concurrency Control**: Uses locks and conditions to ensure thread safety when accessing shared resources such as the message queue.
+### Requirements:
+- Python 3.11.2
 
-### Thread Pool Design:
-- **UserInputThread Class**: Handles user interaction and input processing within a separate thread.
-- **ThreadPoolExecutor**: Manages the execution of multiple threads concurrently.
-- **Synchronization**: Ensures proper synchronization between threads to avoid race conditions and ensure consistent behavior.
+## Test Cases and Expected Outcomes
 
-### Interaction Flow:
-1. The UserInputThread prompts the user for input and adds messages to the processing queue based on user input.
-2. The ProcessThread continuously monitors the message queue and processes messages as they arrive, ensuring higher priority messages are processed first.
-3. The user can also query the system to peek at details of specific messages in the queue.
-4. The ThreadPoolExecutor manages the execution of both the UserInputThread and ProcessThread, allowing for concurrent execution.
+### Test Case 1: Adding a Message
+- Description: User adds a message with high priority.
+- Steps:
+1. Choose option 1 to add a message.
+2. Enter priority as 0 (high).
+3. Enter message content.
+- Expected Outcome: Message is added to the priority queue and processed immediately.
+
+### Test Case 2: Peeking at the Top Message
+- Description: User peeks at the top message in the priority queue.
+- Steps:
+1. Choose option 2 to peek at the top message.
+- Expected Outcome: Details of the top message (if any) are displayed to the user.
+
+### Test Case 3: Stopping the Program
+- Description: User chooses to stop the program.
+- Steps:
+1. Choose option 3 to stop the program.
+- Expected Outcome: Program terminates gracefully.
 
 ## Conclusion
 
-The Message Processing System architecture and design are structured to efficiently handle asynchronous message processing while providing a user-friendly interface for interaction. By separating concerns and utilizing proper synchronization mechanisms, the system ensures reliable and consistent behavior in handling messages of varying priorities.
+The message processing system provides a convenient way to manage messages with different priorities. By utilizing threads and a priority queue, the system ensures efficient processing of messages while allowing users to interact with it seamlessly.
+
+
 
