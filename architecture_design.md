@@ -28,7 +28,7 @@ The `UserInputThread` handles user interactions through the command line interfa
 The use of a thread pool allows for dynamic allocation and management of threads, reducing overhead and improving performance compared to creating and managing threads manually.
 
 ### Workflow Diagram
-![workflow](https://github.com/MdSafwaan/Python-multithreading/assets/96886061/d3af3c04-a0ce-4a30-adb1-b975b92a4f04)
+![threadpool_workflow](https://github.com/MdSafwaan/Python-multithreading/assets/96886061/fc5dbb90-7b4f-41a9-a323-236e1a2c3893)
 
 ## Good Design/Coding Concepts Used
 
