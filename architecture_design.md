@@ -19,6 +19,18 @@ The implemented solution utilizes threads and a priority queue to manage message
 - Processing: Messages are processed in the order of their priority, with higher priority messages being processed first.
 - Peeking: Allows users to view the top message in the priority queue without removing it.
 
+## Architecture and Design
+
+The system follows a multithreaded architecture where `UserInputThread` and `ProcessThread` operate concurrently. The `UserInputThread` handles user interactions through the command line interface, while the `ProcessThread` manages message processing in the background.
+
+## Good Design/Coding Concepts Used
+
+1. **Concurrency**: Leveraging threads to handle multiple tasks simultaneously, enhancing system responsiveness.
+2. **Modularity**: Breaking down the system into smaller, reusable components (`UserInputThread` and `ProcessThread`) for better maintainability.
+3. **Encapsulation**: Each component encapsulates its functionality, promoting code clarity and reducing dependencies.
+4. **Abstraction**: The use of data structures like the priority queue abstracts away complexity and simplifies message management.
+5. **Error Handling**: Validation of user input and handling of edge cases, ensuring robustness and preventing runtime errors.
+
 ## Building and Running the Program
 
 ### Requirements:
@@ -46,9 +58,12 @@ The implemented solution utilizes threads and a priority queue to manage message
 1. Choose option 3 to stop the program.
 - Expected Outcome: Program terminates gracefully.
 
+## Open Points
+
+- Further optimization: Explore opportunities for optimizing message processing and thread management for better performance.
+- Error handling: Enhance error handling to cover all possible edge cases and provide informative error messages.
+
 ## Conclusion
 
 The message processing system provides a convenient way to manage messages with different priorities. By utilizing threads and a priority queue, the system ensures efficient processing of messages while allowing users to interact with it seamlessly.
-
-
 
