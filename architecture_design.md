@@ -27,6 +27,9 @@ The `UserInputThread` handles user interactions through the command line interfa
 
 The use of a thread pool allows for dynamic allocation and management of threads, reducing overhead and improving performance compared to creating and managing threads manually.
 
+### Workflow Diagram
+
+
 ## Good Design/Coding Concepts Used
 
 1. **Concurrency**: Leveraging threads to handle multiple tasks simultaneously, enhancing system responsiveness.
