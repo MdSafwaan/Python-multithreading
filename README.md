@@ -13,10 +13,10 @@ This is a message processing system implemented in Python. It allows users to ad
   python main.py
 
 2. Follow the on-screen instructions to interact with the message processing system:
-- Choose option 1 to add a message.
-- Choose option 2 to peek at the top message in the priority queue.
-- Choose option 3 to stop the program.
-
+   - Choose option 1 to add a message.
+   - Choose option 2 to peek at the top message in the priority queue (enter the message ID to peek at a specific message).
+   - Choose option 3 to stop the program.
+     
 ## Test Cases
 
 ### Adding a Message
