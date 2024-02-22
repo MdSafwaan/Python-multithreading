@@ -4,7 +4,7 @@ This is a message processing system implemented in Python. It allows users to ad
 
 ## Requirements
 
-- Python 3.11.2
+ Python 3.11.2
 
 
 ## Usage
